@@ -1,0 +1,4 @@
+Running test for inventory scraping...
+Making request to: https://www.liquidation.com/
+An error occurred: HTTPSConnectionPool(host='www.liquidation.com', port=443): Read timed out. (read timeout=10)
+Inventory scraped: None

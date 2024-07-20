@@ -1,0 +1,18 @@
+test_scrape_inventory (__main__.TestScraping.test_scrape_inventory) ... Running test for inventory scraping...
+Making request to: https://www.liquidation.com/
+An error occurred: HTTPSConnectionPool(host='www.liquidation.com', port=443): Read timed out. (read timeout=10)
+Inventory scraped: None
+FAIL
+
+======================================================================
+FAIL: test_scrape_inventory (__main__.TestScraping.test_scrape_inventory)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/kingjames/sketch/./src/test.py", line 52, in test_scrape_inventory
+    self.assertIsNotNone(inventory, 'Scraping should return a list of items')
+AssertionError: unexpectedly None : Scraping should return a list of items
+
+----------------------------------------------------------------------
+Ran 1 test in 10.254s
+
+FAILED (failures=1)

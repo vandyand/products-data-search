@@ -1,0 +1,16 @@
+Running test for inventory scraping...
+Inventory scraped: None
+FAIL
+
+======================================================================
+FAIL: test_scrape_inventory (__main__.TestScraping.test_scrape_inventory)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/kingjames/sketch/./src/test.py", line 49, in test_scrape_inventory
+    self.assertIsNotNone(inventory, 'Scraping should return a list of items')
+AssertionError: unexpectedly None : Scraping should return a list of items
+
+----------------------------------------------------------------------
+Ran 1 test in 10.364s
+
+FAILED (failures=1)

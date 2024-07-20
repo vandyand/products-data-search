@@ -1,0 +1,36 @@
+To save the test results to a file, you can use Python's `unittest` module along with the `unittest.TextTestRunner` class, which can be configured to write output to a file. Here’s how you can modify your `test.py` script to save the results:
+
+1. Import the `sys` and `unittest` modules.
+2. Redirect the standard output to a file using `sys.stdout`.
+
+Here’s an updated version of your `test.py` script with these changes:
+
+```python
+import unittest
+import sys
+
+class TestScraping(unittest.TestCase):
+    # Assuming your test cases are defined here
+    def test_scrape_inventory(self):
+        # Your existing test case implementation
+        pass
+
+if __name__ == '__main__':
+    # Open a file to write the test results
+    with open('test_results.txt', 'w') as f:
+        # Redirect stdout to the file
+        runner = unittest.TextTestRunner(stream=f, verbosity=2)
+        unittest.main(testRunner=runner)
+```
+
+In this updated script, the test results will be saved to a file named `test_results.txt` in the same directory as your script. The `verbosity=2` argument provides more detailed test results.
+
+Alternatively, you can run your tests and redirect the output to a file from the command line:
+
+```sh
+python3 ./src/test.py > test_results.txt 2>&1
+```
+
+This command will run your tests and save both the standard output and standard error to `test_results.txt`. 
+
+Make sure to modify the paths if needed and ensure the `test_results.txt` file is created in the desired location.
